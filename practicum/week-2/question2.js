@@ -10,8 +10,14 @@ Example: input: cookies = [3, 5, 8] , extraCookies = 8
  */
 
  var canGetEqualCookies = function(cookies, extraCookies) {
-         var max=Math.max(cookies);
-         
+         var maxarray=Math.max(cookies);
+         var total= maxarray *3
+         if (sum(cookies)+extraCookies == total){
+                 return true;
+         }
+         return false;
+
+
      
     
  };
