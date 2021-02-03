@@ -10,6 +10,8 @@ Example: input: cookies = [3, 5, 8] , extraCookies = 8
  */
 
  var canGetEqualCookies = function(cookies, extraCookies) {
+         var max=Math.max(cookies);
+         
      
     
  };
