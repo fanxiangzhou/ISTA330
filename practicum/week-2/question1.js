@@ -20,5 +20,4 @@ var runningSum = function(input) {
     return output
    
 };
-let q1 = runningSum([5,6,1])
-console.log(q1)
+

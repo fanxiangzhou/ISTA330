@@ -10,6 +10,15 @@ There are 5 ordered pairs: (4, 6), (4, 9), (2, 6), (2, 9), (6, 9)
 
 var numberOfOrderedPairs = function(input) {
     var num = 0
-    
+    for (i = 0; i < input.length; i++){
+        for( y = 0; y < input.length ; y++){
+            if( input[i] < input[y]&&i<y){
+                num+=1
+            }
+        }
+    }
+    return num;
+
 
 };
+l

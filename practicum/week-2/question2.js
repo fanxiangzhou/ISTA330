@@ -34,7 +34,6 @@ Example: input: cookies = [3, 5, 8] , extraCookies = 8
      
     
  };
- let q2 = canGetEqualCookies([3,5,8],9)
- console.log(q2)
+ 
 
 
