@@ -10,5 +10,21 @@ output: [5, 5, 2, 2, 2, 2]
 */
 
 var decode = function(input) {
+    var output=[]
+    
+    for(i=0;i<input.length;i+=2){
+        console.log(input[i])
+        for(y=0;y<parseInt(input[i]);y++){
+            output.push(input[i+1]);
+
+        }
+        
+
+    }
+    
+    return output;
+
 
 };
+let q11 = decode([2,5,4,2])
+console.log(q11)
