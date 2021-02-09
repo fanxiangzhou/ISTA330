@@ -12,11 +12,11 @@ output: 3
 */
 
 var minimalReduction = function(n) {
-    if(n%3==0){
-        var temp =n/3
+    if( n%3 ==0){
+        var temp = n/3
         return temp-1
 
-    }else if(n%4==0){
+    }else if( n%4 == 0){
         return n/4-1
     }else{
         return minimalReduction(n-1)
@@ -27,6 +27,3 @@ var minimalReduction = function(n) {
 
 
 };
-let q5 = minimalReduction(19)
-console.log(q5)
-

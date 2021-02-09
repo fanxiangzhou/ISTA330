@@ -9,12 +9,12 @@ output: [1, 0, 1, 2]
 
 var biggerAndEven = function(input) {
     var output=[]
-    for(i=0;i<input.length;i++){
-        var temp=0
-        for(y=0;y<input.length;y++){
+    for( i=  0;i<input.length; i++){
+        var temp = 0
+        for(y = 0; y < input.length; y++){
 
 
-            if(input[i]<input[y]&&input[y]%2==0){
+            if( input[i] < input[y] && input[y]%2==0){
                 temp+=1
 
             }
@@ -26,5 +26,3 @@ var biggerAndEven = function(input) {
     return output;
 };
 
-let q8 = biggerAndEven([23,44,12,4]);
-console.log(q8)

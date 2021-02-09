@@ -12,14 +12,14 @@ The letters in A are guaranteed distinct, and all characters in A and B are lett
 
 var howManyCommon = function(A, B) {
     var array_a =A.split('');
-    console.log(array_a)
+    
     var array_b =B.split('');
-    console.log(array_b)
+    
     var sum =0;
     for( i=0 ; i<array_a.length ; i++){
         for ( y=0;y<array_b.length; y++){
             
-            if(array_a[i]==array_b[y]){
+            if( array_a[i]==array_b[y]){
                 sum+=1
             }
         }

@@ -9,17 +9,16 @@ output: 'hello'
 */
 
 var suffleString = function(input, shuffleIndices) {
-    var array_input=input.split('')
-    console.log(array_input)
+    var array_input = input.split('')
+    
     var ouput=''
-    for(i=0;i<shuffleIndices.length;i++){
+    for( i=0 ; i < shuffleIndices.length; i++){
         
-        ouput+=array_input[shuffleIndices[i]]
+        ouput +=array_input[shuffleIndices[i]]
     
     }
     
     return ouput;
 
 };
-let q9 = suffleString('llheo',[2,3,0,1,4])
-console.log(q9)
+
