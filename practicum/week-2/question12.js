@@ -21,7 +21,7 @@ var maxBalanceNumber = function(input) {
         if(array[i] == 'a' && array[i+1] == 'b'){
           output+=1;
 
-        }else if(array[i]=='b'&& array[i+1] == 'a'){
+        }else if(array[i-1]=='b'&&array[i]=='b'&& array[i+1] == 'a'){
           output+=1;
         }
 
@@ -31,5 +31,6 @@ var maxBalanceNumber = function(input) {
       return output;
 
 };
-
+let q12 = maxBalanceNumber('abaabbabab')
+console.log(q12)
 
