@@ -19,8 +19,10 @@ var maxBalanceNumber = function(input) {
       var array = input.split('')
       for(i = 0;i < array.length ;i++){
         if(array[i] == 'a' && array[i+1] == 'b'){
-          output+=1
+          output+=1;
 
+        }else if(array[i]=='b'&& array[i+1] == 'a'){
+          ouput+=1;
         }
 
       }

@@ -14,7 +14,7 @@ output: 3
 var minimalReduction = function(n) {
     if( n%3 ==0){
         var temp = n/3
-        return temp-1
+        return temp
 
     }else if( n%4 == 0){
         return n/4
