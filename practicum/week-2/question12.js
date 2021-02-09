@@ -22,7 +22,7 @@ var maxBalanceNumber = function(input) {
           output+=1;
 
         }else if(array[i]=='b'&& array[i+1] == 'a'){
-          ouput+=1;
+          output+=1;
         }
 
       }
