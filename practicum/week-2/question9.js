@@ -13,8 +13,9 @@ var suffleString = function(input, shuffleIndices) {
     
     var ouput=''
     for( i=0 ; i < shuffleIndices.length; i++){
+       
         
-        ouput +=array_input[shuffleIndices[i]]
+        ouput +=array_input[shuffleIndices.indexOf(i)]
     
     }
     

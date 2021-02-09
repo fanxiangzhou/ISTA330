@@ -6,6 +6,7 @@ output: 3
 */
 
 var median = function(input) {
+    input.sort()
     for(i = 0 ; i < input.length; i++){
         if(input.length %2 ==1){
             return input[(input.length+1)/2-1]

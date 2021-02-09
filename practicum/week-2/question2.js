@@ -15,7 +15,7 @@ Example: input: cookies = [3, 5, 8] , extraCookies = 8
                  sum+=cookies[i]
                  
                  }
-         if(sum%(cookies.length-1)==0){
+         if(sum%(cookies.length)==0){
                  return true;
          }
         
@@ -31,6 +31,6 @@ Example: input: cookies = [3, 5, 8] , extraCookies = 8
      
     
  };
- 
+
 
 
