@@ -10,23 +10,20 @@ Example: input: cookies = [3, 5, 8] , extraCookies = 8
  */
 
  var canGetEqualCookies = function(cookies, extraCookies) {
-         var maxarray = cookies[0]
-         
-         var sum = 0
+         var sum = extraCookies
          for(i=0 ;i<cookies.length ;i++){
                  sum+=cookies[i]
-                 if(cookies[i]>maxarray){
-                         maxarray = cookies[i]
-
+                 
                  }
-         var total = maxarray*3
-
-
-         }
-
-         if (sum+extraCookies == total){
+         if(sum%(cookies.length-1)==0){
                  return true;
          }
+        
+
+
+         
+
+        
          return false;
          
 
