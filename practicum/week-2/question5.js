@@ -44,5 +44,3 @@ var minimalReduction = function(n) {
 
 
 
-let q5 =minimalReduction(12)
-console.log(q5)
