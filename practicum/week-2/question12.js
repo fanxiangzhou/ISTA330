@@ -13,28 +13,42 @@ input: 'abaabbabab'
 output: 4 because the following partition has the highest number of balanced substrings:
           'ab', 'aabb', 'ab', 'ab'
 */
-
+function* all_partitions(string) {
+  for (var cutpoints = 0; cutpoints < (1 << (string.length - 1)); cutpoints++) {
+      var result = [];
+      var lastcut = 0;
+      for (var i = 0; i < string.length - 1; i++) {
+          if (((1 << i) & cutpoints) !== 0) {
+              result.push(string.slice(lastcut, i + 1));
+              lastcut = i + 1;
+          }
+      }
+      result.push(string.slice(lastcut));
+      yield result;
+  }
+}
 var maxBalanceNumber = function(input) {
+  
       var output = 0
       var array = input.split('')
-      var temp=[]
+      
       for(i = 0;i < array.length ;i++){
         
         if(array[i] == 'a' && array[i+1] == 'b'){
-          temp.push(i)
-          temp.push(i+1)
+          
           output+=1;
 
-        }else if(temp.includes(i)== false&&temp.includes(i+1) ==false&&array[i]=='b'&& array[i+1] == 'a'){
-          output+=1;
         }
 
       }
 
 
       return output;
+  
+      
 
 };
-let q12 = maxBalanceNumber('abaabbabab')
-console.log(q12)
+
+
+
 
