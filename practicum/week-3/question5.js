@@ -34,16 +34,28 @@ var isMonotonic = function(input) {
         }
         
     }
-    var rev=origin.reverse()
     
+    console.log(origin)
     for(i=0;i<origin.length;i++){
-        if(or1[i]!=rev[i]){
-            return false;
-        }else if(or1[i]!=origin[i]){
-            return false
+        
+        if(origin[i+1]>origin[i]){
+            if (or1[i]!=origin[i]){
+                console.log(1)
+            
+                return false;
+            }
+            return true;
+       
+        }else { 
+            if(or1[i]!= origin[origin.length-i]){
+                console.log(2)
+                return false
+            }
+            return true;
         }
+
     }
-    return true;
+
 
 
 };
