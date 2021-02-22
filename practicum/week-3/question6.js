@@ -12,5 +12,25 @@ output: 2
 */
 
 var m_element = function(input) {
+    var dict={}
+    for(i=0;i<input.length;i++){
+        if(!(input[i] in dict)){
+            dict[input[i]]=1;
+
+        }else{
+            dict[input[i]]+=1;
+        }
+    }
+   
+    for(var key in dict){
+        
+        if(dict[key]>(input.length/2)){
+            return key;
+
+        }
+        
+        
+    }
+    return -1;
 
 };

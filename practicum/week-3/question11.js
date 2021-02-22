@@ -14,5 +14,6 @@ output: 1
 */
 
 var d_count = function(input1, input2, d) {
+    
 
 };

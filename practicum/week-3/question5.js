@@ -17,7 +17,33 @@ output: true
 */
 
 var isMonotonic = function(input) {
+    
+    var or1=[]
+    for(z=0;z<input.length;z++){
+        or1.push(input[z])
+    }
+    
+    var origin=input
+    for(i=0;i<origin.length;i++){
+        for(y=i+1;y<origin.length;y++){
+            if(origin[i]>origin[y]){
+                var temp =origin[y]
+                origin[y]=origin[i]
+                origin[i]=temp
+            }
+        }
+        
+    }
+    var rev=origin.reverse()
+    
+    for(i=0;i<origin.length;i++){
+        if(or1[i]!=rev[i]){
+            return false;
+        }else if(or1[i]!=origin[i]){
+            return false
+        }
+    }
+    return true;
+
 
 };
-
-console.log('hi');

@@ -13,5 +13,18 @@ so there are two groups with the largest size.
 */
 
 var largestGroupsCount = function(n) {
+    
+    var helper =function(n,w){
+        
+        if(9>n){
+            return n;
+        }else{
+            return helper(n-w,w+1)
+        }
+    }
+    var output=helper(n,9)
+    return output;
+    
 
 };
+
