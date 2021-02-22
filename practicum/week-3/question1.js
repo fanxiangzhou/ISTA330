@@ -10,7 +10,18 @@ is at least twice as much as every other number
 */
 
 var largestNumberIsAtLeastTwice = function(input) {
-        input.sort()
+        
+        for(i=0;i<input.length;i++){
+                for(y=i+1;y<input.length;y++){
+                        if(input[i]>input[y]){
+                        var temp =input[y]
+                        input[y]=input[i]
+                        input[i]=temp
+                        }
+                }
+        
+        }
+        
         
         if(input[input.length-2]*2>input[input.length-1]){
                 return false;

@@ -49,7 +49,7 @@ var minPairs = function(input) {
             output.push(total[i])
         }
     }
-    return output;
+    return output.sort();
     
 
 };
