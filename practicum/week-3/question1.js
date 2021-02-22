@@ -23,11 +23,13 @@ var largestNumberIsAtLeastTwice = function(input) {
         }
         
         
+        
         if(input[input.length-2]*2>input[input.length-1]){
                 return false;
         }
         return true;
    
 };
+
 
 

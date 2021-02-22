@@ -25,7 +25,7 @@ var m_element = function(input) {
     for(var key in dict){
         
         if(dict[key]>(input.length/2)){
-            return key;
+            return parseInt(key);
 
         }
         
