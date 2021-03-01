@@ -15,6 +15,8 @@
         and under the image display its name.
     </div>
     <div id='flowersDiv'>
+        
+
 
     </div>
     <script>
@@ -51,6 +53,21 @@
              rose,
              waterlily
        ];
+       let element =document.getElementById("flowersDiv")
+       
+       let ptext='<p>'
+        for(i=0;i<flowers.length;i++){
+            if(i==4){
+                ptext+='</br>'
+            }
+            ptext+='<img src=image/'+flowers[i].picture+'</img'
+            ptext+='<p>'+flowers[i].name+'</p'
+            
+        }
+        ptext+='</p'
+        element.innerHTML = ptext;
+
     </script>
+    
 </body>
 </html>
