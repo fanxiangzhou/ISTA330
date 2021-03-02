@@ -23,10 +23,10 @@
                 <td><img src=images/daisy.jpg><p>daisy</p></td>
             </tr>
             <tr>
-                <td><img src=images/cherryblossom.png><p>cherryblossom</p></td>
-                <td><img src=images/daffodil.png><p>daffodil</p></td>
-                <td><img src=images/lily.jpg><p>lily</p></td>
-                <td><img src=images/daisy.jpg><p>daisy</p></td>
+                <td><img src=images/sunflower.png><p>sunflower</p></td>
+                <td><img src=images/tulip.png><p>tulip</p></td>
+                <td><img src=images/rose.png><p>rose</p></td>
+                <td><img src=images/waterlily.png><p>waterlily</p></td>
 
             </tr>
         </table>
@@ -70,15 +70,15 @@
        ];
        let element =document.getElementById("flowersDiv")
        
-       let ptext='<table><td>'
+       let ptext='<table><tr>'
         for(i=0;i<flowers.length;i++){
             if(i==4){
-                ptext+='</td><td>'
+                ptext+='</tr><tr>'
             }
-            ptext+='<tr><img src=images/'+flowers[i].picture+'><p>'+flower[i].name+'</p></tr>'
+            ptext+='<td><img src=images/'+flowers[i].picture+'><p>'+flower[i].name+'</p></td>'
             
         }
-        ptext+='</td><table'
+        ptext+='</tr><table'
         element.innerHTML = ptext;
 
     </script>
