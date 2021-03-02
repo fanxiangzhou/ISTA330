@@ -55,14 +55,15 @@
        ];
        let element =document.getElementById("flowersDiv")
        
-       let ptext='<p>'
+       let ptext='<table><tr>'
         for(i=0;i<flowers.length;i++){
-            
-            ptext+='<img src=images/'+flowers[i].picture+'><p>'+flowers[i].name+'</p'
-            
+            if(i==4){
+                ptext+='</tr><tr>'
+            }
+            ptext+='<td><img src=images/'+flowers[i].picture+'><p>'+flower[i].name+'</p>'
             
         }
-        ptext+='</p>'
+        ptext+='</tr><table'
         element.innerHTML = ptext;
 
     </script>
