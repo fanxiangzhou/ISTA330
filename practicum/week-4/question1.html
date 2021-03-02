@@ -54,19 +54,19 @@
              rose,
              waterlily
        ];
-       let element =document.getElementById("flowersDiv")
+       let flowerdiv =document.getElementById("flowersDiv")
        
-       let ptext='<table><tr>'
+       let ptext='<table><tr>';
         for(i=0;i<flowers.length;i++){
-            if(i==4){
+            if(i==3){
                 ptext+='</tr><tr>'
             }
             ptext+='<td><img src=images/'+flowers[i].picture+'><p>'+flower[i].name+'</p></td>'
             
         }
-        ptext+='</tr><table'
-        element.innerHTML += ptext;
-        console.log(ptext)
+        ptext+='</tr><table';
+        flowerdiv.innerHTML += "ptext";
+        
         
 
     </script>
