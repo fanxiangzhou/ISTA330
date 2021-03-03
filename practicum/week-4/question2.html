@@ -83,8 +83,8 @@
         }
         let daffodil = new Flower('Daffodil', 'daffodil.png');
         let cherryblossom = new Flower('Cherry blossom', 'cherryblossom.png');
-        let lily = new Flower('Lily', 'lily.png');
-        let daisy = new Flower('Daisy', 'daisy.png');
+        let lily = new Flower('Lily', 'lily.jpg');
+        let daisy = new Flower('Daisy', 'daisy.jpg');
         let sunflower = new Flower('Sunflower', 'sunflower.png');
         let tulip = new Flower('Tulip', 'tulip.png');
         let rose = new Flower('Rose', 'rose.png');
@@ -100,6 +100,64 @@
             rose,
             waterlily
         ];
+        let rearrange = (event) => {
+            let flowerdiv =document.getElementById("flowersDiv")
+            let flowername=event.target.name;
+            let flowerstring=['daffodil',
+            'cherryblossom',
+            'lily',
+            'daisy',
+            'sunflower',
+            'tulip',
+            'rose',
+            'waterlily']
+            var output=[];
+            let findflower = (x) =>{
+                if(x.name == flowername){
+                    return true;
+                }
+            }
+            var num=flowers.findIndex(findflower);
+            flowerstring.sort()
+            
+            var legth=flowerstring.length
+            let ptext='<table><tr>';
+            let counter = 0;
+            for(i = num;i < legth; i++){
+                console.log(i)
+                
+                if(counter ==  flowerstring.length / 2){
+                    ptext+='</tr><tr>'
+                }
+                counter = counter + 1;
+                ptext+='<td><img src=images/'+flowers[i].picture+'  name ='+flowers[i].name+' onclick= rearrange(event)><p>'+flowers[i].name+'</p></td>'
+                if(i === flowers.length - 1){
+                    legth = num;
+                    num=0;
+                    for(i=num;i<legth;i++){
+                        if(counter ==  flowers.length / 2){
+                            ptext+='</tr><tr>'
+                        }
+                        counter = counter + 1;
+                        ptext+='<td><img src=images/'+flowers[i].picture+'  name ='+flowers[i].name+' onclick= rearrange(event)><p>'+flowers[i].name+'</p></td>'
+                    }
+                }
+            }
+            ptext+='</tr><table>';
+            flowerdiv.innerHTML = ptext;
+        }
+        let flowerdiv =document.getElementById("flowersDiv")
+       
+        let ptext='<table><tr>';
+        for(i=0;i<flowers.length;i++){
+            if(i==4){
+                ptext+='</tr><tr>'
+            }
+            ptext+='<td><img src=images/'+flowers[i].picture+'  name ='+flowers[i].name+' onclick= rearrange(event)><p>'+flowers[i].name+'</p></td>'
+            
+        }
+        ptext+='</tr><table>';
+        flowerdiv.innerHTML += ptext;
     </script>
 </body>
 
